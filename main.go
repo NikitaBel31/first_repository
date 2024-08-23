@@ -13,7 +13,7 @@ func main() {
 	fmt.Println(<-a)
 }
 func someFunc(a chan int) {
-	a <- 12
-	a <- 10
 	a <- 1
+	a <- 2
+	a <- 3
 }
