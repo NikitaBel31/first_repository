@@ -8,10 +8,12 @@ func main() {
 	go someFunc(a)
 	fmt.Println(<-a)
 	fmt.Println(<-a)
-	fmt.Println("Вот что вывелось")
-
+	close(a)
+	fmt.Println(<-a)
+	fmt.Println(<-a)
 }
 func someFunc(a chan int) {
 	a <- 12
 	a <- 10
+	a <- 1
 }
