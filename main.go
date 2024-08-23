@@ -7,7 +7,7 @@ func main() {
 	a := make(chan int)
 	go someFunc(a)
 	fmt.Println(<-a)
-	fmt.Scanln()
+	fmt.Println("Вот что вывелось")
 
 }
 func someFunc(a chan int) {
